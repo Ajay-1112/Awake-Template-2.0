@@ -64,7 +64,7 @@ const Services = () => {
       </div>
 
       {/* Services Grid */}
-      <div className="flex flex-col md:flex-row flex-wrap justify-center gap-4 px-3 md:px-0 mb-16 max-w-7xl mx-auto">
+      <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 px-3 md:px-0 mb-16 max-w-7xl mx-auto">
         {services.map((service) => {
           const IconComponent = service.icon;
           return (
@@ -112,8 +112,8 @@ const Services = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button text="Browse Projects" link="#Projects" className="bg-gray-100 text-black min-w-44" />
-            <Button text="Book A Call" link="" className="bg-black text-white min-w-44 border " />
+            <Button text="Browse Projects" link="#Projects" className="bg-gray-100 hover:bg-black hover:text-white text-black min-w-44" />
+            <Button text="Book A Call" link="" className="bg-black text-white hover:bg-white hover:text-black min-w-44 border " />
           </div>
         </div>
       </div>

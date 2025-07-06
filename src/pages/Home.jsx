@@ -46,7 +46,7 @@ const Home = () => {
         {/* Hero Section */}
         <motion.section
           id="home"
-          className=" min-h-screen rounded-b-2xl flex flex-col items-center justify-center text-center px-4 pt-12  md:pb-0 lg:pt-20 "
+          className=" min-h-screen rounded-b-2xl flex flex-col items-center justify-center text-center px-4 pt-6  md:pb-0 md:pt-20 "
           style={{
             background: "linear-gradient(to right, #E2F6FD 20%, #FEF7E6 80%, #FFFFFF 100%)"
           }}

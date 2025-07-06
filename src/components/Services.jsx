@@ -57,20 +57,20 @@ const Services = () => {
         </h1>
       </div>
 
-      <div className="text-center mt-10 mb-10">
-        <p className="text-sm md:text-lg text-secondary-text max-w-4xl mx-auto">
+      <div className="text-center mt-10 mb-10 px-3 md:px-0">
+        <p className="text-sm md:text-lg text-secondary-text text-justify max-w-4xl mx-auto">
           At Data Huaka'i, we provide personalized data analysis and consulting services to help small to mid-sized businesses in Hawaii make informed choices based on clear data to grow their business.
         </p>
       </div>
 
       {/* Services Grid */}
-      <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 px-3 md:px-0 mb-16 max-w-7xl mx-auto">
+      <div className="grid lg:grid-cols-4 grid-cols-2  justify-center gap-4 px-3 md:px-0 mb-16 max-w-7xl mx-auto">
         {services.map((service) => {
           const IconComponent = service.icon;
           return (
             <div
               key={service.id}
-              className="w-full sm:w-[48%] lg:w-[23%] sm:h-auto h-auto perspective-1000"
+              className="w-full  sm:h-auto h-auto perspective-1000"
             >
               <div
                 className={`
@@ -78,14 +78,14 @@ const Services = () => {
             ${service.bgColor} ${service.hoverColor} hover:scale-[1.02]
           `}
               >
-                <div className="h-full p-8 justify-between text-primary-text">
+                <div className="h-full p-3 py-5 md:p-8   justify-between text-primary-text">
                   {/* Icon */}
                   <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-white/70 backdrop-blur-sm">
                     <IconComponent size={32} />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl pt-8  ">
+                  <h3 className="md:text-2x text-lg pt-8  ">
                     {service.title}
                   </h3>
 

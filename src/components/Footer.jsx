@@ -44,7 +44,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className=" text-primary  py-10 md:py-16 px-6">
+    <footer className=" text-primary bg-gray-50 py-10 md:py-16 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo and Description */}

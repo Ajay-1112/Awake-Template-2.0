@@ -65,7 +65,7 @@ const FaqsCard = ({ faq }) => {
 const Faq = () => {
   return (
     <section
-      className="leading-relaxed max-w-screen-xl md:mt-12 mx-auto px-5 md:px-8 rounded-4xl md:p-8"
+      className="leading-relaxed max-w-screen-xl  mx-auto px-5 md:px-8 rounded-4xl md:p-8"
       id="Faq"
     >
       <div className="space-y-3 text-center">

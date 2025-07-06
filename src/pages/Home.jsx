@@ -144,7 +144,6 @@ const Home = () => {
           </motion.section>
         ))}
 
-        <Footer />
       </div>
     </PortfolioProvider>
   );

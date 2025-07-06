@@ -5,11 +5,15 @@ import {
   CardHeader,
 } from "@/components/ui/shadcn/card";
 import { Button } from "@/components/ui/shadcn/button";
-import { portfolioItems } from "@/data/Portfolio_data";
+import { usePortfolio } from "@/contexts/PortfolioContext"; // <-- Changed import here
+import { createSlug } from '../utils/CreateSlug';
+
 
 export default function Portfolio() {
+  const portfolioItems = usePortfolio(); 
+
   return (
-    <div className="bg-background py-16 md:py-24">
+    <div className=" py-16 md:py-24">
       <div className="container mx-auto px-4 2xl:max-w-[1400px]">
         <div className="mb-12 text-center md:mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
@@ -22,10 +26,10 @@ export default function Portfolio() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-3 ">
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-3 ">
           {portfolioItems.map((project) => (
             <Card
-              key={project.id}
+              key={project.id} // Make sure project.id exists or use index
               className="group hover:border-primary/30 overflow-hidden pt-0 transition-all duration-300 hover:shadow-lg"
             >
               <div className="relative aspect-video overflow-hidden">
@@ -46,7 +50,7 @@ export default function Portfolio() {
 
               <CardFooter>
                 <Button variant="secondary">
-                  <a href={project.href} target="_blank" rel="noopener noreferrer" className="text-primary flex items-center">
+                  <a href={`/${createSlug(project.title)}`} key={project.title}  className="text-primary flex items-center">
                     <span className="text-sm font-medium">View project</span>
                     <ExternalLink className="ml-1 h-4 w-4" />
                   </a>

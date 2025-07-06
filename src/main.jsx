@@ -1,10 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './styles/index.css'
-import App from './App.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client'; // For React 18+
+import { BrowserRouter } from 'react-router-dom'; // <--- Import this
+import App from './App';
+import '../src/styles/index.css'; // Or your main CSS file
+import Footer from './components/Footer';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter> 
+    <>
+      <App />
+      <Footer/>
+    </>
+    </BrowserRouter>
+      <footer/>
+  </React.StrictMode>
+);

@@ -24,7 +24,7 @@ export default function ProjectOverview() {
     }
 
     return (
-        <div className="mt-16 max-w-7xl mx-auto px-2 lg:px-4 xl:px-0">
+        <div className="mt-16 mb-20 max-w-7xl mx-auto px-2 lg:px-4 xl:px-0">
             {projectItem && <SafariComponent src={projectItem.imgSrc} url={projectItem.href} />}
             <div className='grid grid-cols-1 xl:grid-cols-4 gap-12 xl:gap-2 pt-12'>
                 <div className='xl:col-span-3 flex flex-col gap-6'>
